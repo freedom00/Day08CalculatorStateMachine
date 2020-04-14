@@ -1,0 +1,55 @@
+﻿<Window x:Class="Day08CalculatorStateMachine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day08CalculatorStateMachine"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="470" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="1st value: " HorizontalAlignment="Left" Margin="22,20,0,0" VerticalAlignment="Top" />
+        <Label Content="operation: " HorizontalAlignment="Left" Margin="22,60,0,0" VerticalAlignment="Top" />
+        <Label Content="2nd value: " HorizontalAlignment="Left" Margin="22,100,0,0" VerticalAlignment="Top" />
+        <Label Content="result: " HorizontalAlignment="Left" Margin="22,140,0,0" VerticalAlignment="Top" />
+        <TextBox Name="tb1stValue" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" Margin="110,24,0,0" />
+        <TextBox Name="tb2ndValue" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" Margin="110,104,0,0" />
+        <TextBox Name="tbResult" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="251" Margin="110,144,0,0" IsReadOnly="True" />
+        <Label Name="lblOperation" Content="?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,60,0,0" Width="251" HorizontalContentAlignment="Center" />
+        <Grid HorizontalAlignment="Center" Height="216" VerticalAlignment="Top" Width="350" Margin="0,195,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button Name="bt7" Click="btNumber_Click" Grid.Row="0" Grid.Column="0" Margin="5" Content="7" />
+            <Button Name="bt8" Click="btNumber_Click" Grid.Row="0" Grid.Column="1" Margin="5" Content="8" />
+            <Button Name="bt9" Click="btNumber_Click" Grid.Row="0" Grid.Column="2" Margin="5" Content="9" />
+            <Button Name="btSign" Click="btNumber_Click" Grid.Row="0" Grid.Column="3" Margin="5" Content="+/-" />
+            <Button Name="btClear" Click="btClear_Click" Grid.Row="0" Grid.Column="4" Margin="5" Content="CE" />
+
+            <Button Name="bt4" Click="btNumber_Click" Grid.Row="1" Grid.Column="0" Margin="5" Content="4" />
+            <Button Name="bt5" Click="btNumber_Click" Grid.Row="1" Grid.Column="1" Margin="5" Content="5" />
+            <Button Name="bt6" Click="btNumber_Click" Grid.Row="1" Grid.Column="2" Margin="5" Content="6" />
+            <Button Name="btMultiply" Click="btOperation_Click" Grid.Row="1" Grid.Column="3" Margin="5" Content="*" />
+            <Button Name="btDivide" Click="btOperation_Click" Grid.Row="1" Grid.Column="4" Margin="5" Content="/" />
+
+            <Button Name="bt1" Click="btNumber_Click" Grid.Row="2" Grid.Column="0" Margin="5" Content="1" />
+            <Button Name="bt2" Click="btNumber_Click" Grid.Row="2" Grid.Column="1" Margin="5" Content="2" />
+            <Button Name="bt3" Click="btNumber_Click" Grid.Row="2" Grid.Column="2" Margin="5" Content="3" />
+            <Button Name="btAdd" Click="btOperation_Click" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" Margin="5" Content="+" />
+            <Button Name="btSubtract" Click="btOperation_Click" Grid.Row="2" Grid.Column="4" Margin="5" Content="-" />
+
+            <Button Name="btDot" Click="btNumber_Click" Grid.Row="3" Grid.Column="1" Margin="5" Content="." />
+            <Button Name="bt0" Click="btNumber_Click" Grid.Row="3" Grid.Column="2" Margin="5" Content="0" />
+            <Button Name="btResult" Click="btResult_Click" Grid.Row="3" Grid.Column="4" Margin="5" Content="=" />
+        </Grid>
+    </Grid>
+</Window>
